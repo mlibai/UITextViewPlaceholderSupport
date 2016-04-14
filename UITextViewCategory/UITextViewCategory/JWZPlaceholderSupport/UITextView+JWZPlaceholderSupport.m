@@ -29,15 +29,10 @@ static const void *const kJWZPlaceholderSupportKeyOfMaximumTextLength = &kJWZPla
 @implementation UITextView (JWZPlaceholderSupport)
 
 - (void)setPlaceholder:(NSString *)placeholder {
-    if (placeholder != nil && placeholder.length > 0) {
-        UILabel *placeholderLabel = [self _JWZTextViewPlaceholder];
-        placeholderLabel.text = placeholder;
+    if (placeholder != nil) {
+        [[self _JWZTextViewPlaceholder] setText:placeholder];
     } else {
-        _JWZTextViewPlaceholder *label = [self _JWZTextViewPlaceholderIfLoaded];
-        if (label != nil) {
-            [label removeFromSuperview];
-            [self _setJWZTextViewPlaceholder:nil];
-        }
+        [[self _JWZTextViewPlaceholderIfLoaded] setText:placeholder];
     }
 }
 
