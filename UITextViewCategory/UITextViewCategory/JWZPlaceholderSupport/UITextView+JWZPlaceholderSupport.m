@@ -61,7 +61,7 @@ static const void *const kJWZPlaceholderSupportKeyOfMaximumTextLength = &kJWZPla
         [self addSubview:placeholderLabel];
         
         placeholderLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        NSArray *constraints1 = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[placeholderLabel]-|" options:(NSLayoutFormatAlignAllLeft) metrics:nil views:NSDictionaryOfVariableBindings(placeholderLabel)];
+        NSArray *constraints1 = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[placeholderLabel]" options:(NSLayoutFormatAlignAllLeft) metrics:nil views:NSDictionaryOfVariableBindings(placeholderLabel)];
         [self addConstraints:constraints1];
         NSArray *constraints2 = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[placeholderLabel]" options:(NSLayoutFormatAlignAllLeft) metrics:nil views:NSDictionaryOfVariableBindings(placeholderLabel)];
         [self addConstraints:constraints2];
