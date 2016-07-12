@@ -13,7 +13,7 @@
  */
 @interface UITextView (JWZPlaceholderSupport)
 
-@property (nonatomic, copy) NSString *placeholder;  // 占位符
-@property (nonatomic) NSUInteger maximumTextLength; // 限制文本长度，默认 NSUIntegerMax。
+@property (nonatomic, copy) NSString *xz_placeholder;  // 占位符
+@property (nonatomic) NSUInteger xz_maximumTextLength; // 限制文本长度，默认 NSUIntegerMax。
 
 @end
